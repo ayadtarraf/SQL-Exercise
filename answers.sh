@@ -37,3 +37,10 @@ WHERE ID = 1
 
 DELETE FROM students
 WHERE ID = 4
+
+SELECT employees.Name, employees.Company, companies.Date FROM employees INNER JOIN companies ON companies.Name=employees.Company;
+
+ SELECT employees.name FROM employees INNER JOIN companies ON employees.Company=companies.Name
+ WHERE companies.Date<2000
+
+ SELECT companies.Name From companies INNER JOIN employees ON employees.Company=companies.Name WHERE Role="Graphic Designer";
